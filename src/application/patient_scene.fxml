@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #c8e7f5;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BT_controller">
+   <children>
+      <Button layoutX="54.0" layoutY="256.0" mnemonicParsing="false" onAction="#getAppointmentReq" prefHeight="28.0" prefWidth="158.0" style="-fx-background-color: #0054a6;" text="Set an appointment" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="55.0" layoutY="306.0" mnemonicParsing="false" onAction="#cancelAppointmentReq" style="-fx-background-color: #0054a6;" text="Cancel an appointment" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="165.0" fitWidth="231.0" layoutX="32.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/BT_logo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="patientDialog" layoutX="291.0" layoutY="186.0" prefHeight="514.0" prefWidth="989.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <ChoiceBox fx:id="chooseDocType" layoutX="32.0" layoutY="42.0" opacity="0.0" prefWidth="150.0" />
+            <Button fx:id="patOkBtn" layoutX="50.0" layoutY="83.0" mnemonicParsing="false" onAction="#getAppointmentReq" opacity="0.0" text="Ok" />
+            <ChoiceBox fx:id="chooseDoc" layoutX="223.0" layoutY="42.0" opacity="0.0" prefWidth="150.0" />
+            <TableView fx:id="apptsTable" layoutX="239.0" layoutY="136.0" prefHeight="354.0" prefWidth="532.0" visible="false">
+              <columns>
+                <TableColumn fx:id="dateCol" prefWidth="125.0" text="Date" />
+                <TableColumn fx:id="timeCol" prefWidth="186.0" text="Time" />
+                  <TableColumn fx:id="doctorCol" minWidth="0.0" prefWidth="223.0" text="Doctor" />
+                  <TableColumn fx:id="patientCol" minWidth="0.0" prefWidth="0.0" text="Patient" />
+              </columns>
+            </TableView>
+            <Button fx:id="setBtn" layoutX="792.0" layoutY="463.0" mnemonicParsing="false" onAction="#setAppointmentReq" text="Set appointment" visible="false" />
+            <Text fx:id="appSetError" fill="RED" layoutX="431.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " />
+            <Button fx:id="cancelBtn" layoutX="784.0" layoutY="463.0" mnemonicParsing="false" onAction="#cancelChosenAppointment" text="Cancel appointment" visible="false" />
+         </children></AnchorPane>
+      <Pane layoutY="167.0" prefHeight="21.0" prefWidth="1280.0" style="-fx-background-color: #0054a6;" />
+      <Text fx:id="patientWelcome" layoutX="25.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER" wrappingWidth="244.94369506835938">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="314.0" fitWidth="275.0" layoutX="10.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/patient.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="54.0" layoutY="354.0" mnemonicParsing="false" onAction="#logout" prefHeight="28.0" prefWidth="158.0" style="-fx-background-color: #0054a6;" text="Logout" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

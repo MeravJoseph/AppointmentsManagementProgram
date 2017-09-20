@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #c8e7f5;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BT_controller">
+   <children>
+      <Button layoutX="63.0" layoutY="257.0" mnemonicParsing="false" onAction="#getAppointmentReq" prefHeight="28.0" prefWidth="158.0" style="-fx-background-color: #0054a6;" text="View appointments" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="165.0" fitWidth="231.0" layoutX="32.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/BT_logo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="291.0" layoutY="188.0" prefHeight="514.0" prefWidth="989.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <TableView fx:id="apptsTable" layoutX="296.0" layoutY="43.0" prefHeight="432.0" prefWidth="450.0">
+              <columns>
+                <TableColumn fx:id="dateCol" prefWidth="91.3333740234375" text="Date" />
+                <TableColumn fx:id="timeCol" prefWidth="109.6666259765625" text="Time" />
+                  <TableColumn fx:id="patientCol" prefWidth="247.0" text="Patient" />
+                  <TableColumn fx:id="doctorCol" minWidth="0.0" prefWidth="0.0" text="Doctor" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+      <Pane layoutY="167.0" prefHeight="21.0" prefWidth="1280.0" style="-fx-background-color: #0054a6;" />
+      <Text fx:id="doctorWelcome" layoutX="25.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER" wrappingWidth="244.94369506835938">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="63.0" layoutY="306.0" mnemonicParsing="false" onAction="#logout" prefHeight="28.0" prefWidth="158.0" style="-fx-background-color: #0054a6;" text="Logout" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="183.0" fitWidth="533.0" layoutX="525.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/doctors.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
